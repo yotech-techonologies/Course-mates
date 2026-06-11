@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Course Mates</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #74ebd5 0%, #ACB6E5 100%);
+      margin: 0;
+      padding: 20px;
+      text-align: center;
+    }
+    h1 {
+      color: #fff;
+      margin-bottom: 30px;
+      animation: fadeInDown 1.5s ease;
+    }
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+    .mate {
+      background: #fff;
+      border-radius: 12px;
+      width: 200px;
+      padding: 15px;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      animation: fadeInUp 1s ease;
+    }
+    .mate:hover {
+      transform: translateY(-10px) scale(1.05);
+      box-shadow: 0 12px 20px rgba(0,0,0,0.25);
+    }
+    .mate img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      animation: zoomIn 1s ease;
+    }
+    .mate p {
+      margin-top: 12px;
+      font-weight: bold;
+      color: #333;
+    }
+
+    /* Animations */
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes zoomIn {
+      from { transform: scale(0.8); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+  <h1>My Course Mates</h1>
+  <div class="container">
+    <div class="mate">
+      <img src="images/mate1.jpg" alt="Mate 1">
+      <p>Mate 1</p>
+    </div>
+    <div class="mate">
+      <img src="images/mate2.jpg" alt="Mate 2">
+      <p>Mate 2</p>
+    </div>
+    <!-- Repeat for all 10 mates -->
+  </div>
+</body>
+</html>
